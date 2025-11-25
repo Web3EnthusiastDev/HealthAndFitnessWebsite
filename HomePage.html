@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health & Fitness</title>
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+        /* Custom Navbar Styling */
+        .custom-navbar {
+            background: linear-gradient(90deg, #ffd61e, #00ccff);
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+        }
+
+        .navbar-brand {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .navbar-nav .nav-item .nav-link {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            color: white;
+            padding: 10px 15px;
+            transition: all 0.3s ease-in-out;
+            border-radius: 4px;
+        }
+
+        .navbar-nav .nav-item .nav-link:hover {
+            background-color: white;
+            color: #1e90ff;
+            transform: scale(1.1);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba%28155,155,155,1%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        .hero-section {
+            background-image: url('homepage.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh; 
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            z-index: 1; 
+            background-color: rgba(0, 0, 0, 0.5); 
+        }
+
+        .hero-section h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            text-shadow: #f4f4f4 2px 2px;
+        }
+
+        .hero-section p {
+            font-size: 1.5rem;
+        }
+
+        .hero-section .btn {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background-color: rgba(0, 123, 255, 0.8);
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        .hero-section .btn:hover {
+            background-color: rgba(0, 123, 255, 1);
+        }
+
+        .contact-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        footer h4 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        footer .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 30px;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            color: #1abc9c; 
+        }
+
+        /* Testimonial Styles */
+        .testimonial {
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .testimonial strong {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Media Queries */
+        @media (max-width: 576px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            .hero-section p {
+                font-size: 1rem;
+            }
+        }
+        footer {
+                background-color: #2a2b2c;
+                padding: 40px 0;
+                text-align: center;
+            }
+    
+            .social-icons {
+                margin: 20px 0;
+            }
+    
+            .social-icons a {
+                margin: 0 10px;
+                font-size: 2rem;
+                transition: color 0.3s, opacity 0.3s; 
+            }
+    
+            .social-icons a.facebook {
+                color: #3b5998;
+            }
+    
+            .social-icons a.twitter {
+                color: #1DA1F2;
+            }
+    
+            .social-icons a.instagram {
+                color: #C13584;
+            }
+    
+            .social-icons a.youtube {
+                color: #FF0000;
+            }
+    
+            .social-icons a:hover {
+                opacity: 0.7; 
+            }
+    
+            /* Footer Styles */
+            footer {
+                background-color: #333;
+                color: #fff;
+                padding: 60px 0;
+                text-align: center;
+                font-family: 'Arial', sans-serif;
+            }
+    
+            footer h4 {
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+                text-transform: uppercase;
+                font-weight: bold;
+                letter-spacing: 2px;
+            }
+    
+            footer .social-icons {
+                margin-bottom: 30px;
+                justify-content: center;
+            }
+    
+            footer .social-icons a {
+                display: inline-block;
+                margin-bottom: 5px;
+                color: white;
+                font-size: 30px;
+                transition: color 0.3s ease;
+            }
+    
+            footer .social-icons a:hover {
+                color: #1abc9c; /* Changes to a soft green on hover */
+            }
+    
+            footer ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 20px 0;
+            }
+    
+            footer ul li {
+                margin: 10px 0;
+            }
+    
+            footer ul li a {
+                color: white;
+                text-decoration: none;
+                font-size: 1.1rem;
+                transition: color 0.3s ease;
+            }
+    
+            footer ul li a:hover {
+                color: #1abc9c; /* Same soft green hover effect */
+            }
+    
+            footer p {
+                margin: 15px 0;
+            }
+    
+            footer p a {
+                color: #1abc9c; /* Soft green for email links */
+                text-decoration: none;
+            }
+    
+            footer p a:hover {
+                text-decoration: underline;
+            }
+    
+            /* Container Styling */
+            footer .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+            }
+    
+            footer .container > div {
+                flex: 1 1 250px;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+    
+            footer .container ul {
+                text-align: left;
+                padding-left: 0;
+            }
+    
+            footer .container > div p {
+                text-align: left;
+                font-size: 1.1rem;
+                color: #ccc;
+            }
+    
+            /* Mobile Responsiveness */
+            @media (max-width: 768px) {
+                footer .container {
+                    flex-direction: column;
+                    align-items: center;
+                }
+    
+                footer .container > div {
+                    text-align: center;
+                }
+    
+                footer .social-icons a {
+                    margin: 0 10px;
+                }
+            }
+            .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2); /* Change as per your design */
+    color: #1e90ff; /* Change as per your design */
+}
+
+    </style>
+  
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <a class="navbar-brand" href="#">Health & Fitness</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="HomePage.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="workoutpage.html">Workouts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Testimonials.html">Testimonials</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ContactUs.html">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  // Highlight the active nav link
+  const currentLocation = window.location.href;
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+  navLinks.forEach(link => {
+    if (link.href === currentLocation) {
+      link.classList.add('active');
+    }
+  });
+</script>
+
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <h1 style="color:rgb(231, 29, 29);">Get Fit, Stay Healthy</h1>
+    <div class="container mt-5">
+      <div class="text-center">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signInModal">Sign In</button>
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
+        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#forgotPasswordModal">Forgot Password</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <h1 class="text-center mb-4" style="font-size: xx-large;"><strong>Welcome to Your Health & Fitness Journey!</strong></h1>
+    <p class="text-center">At Health & Fitness, we believe in empowering individuals to lead healthier lives through fitness, nutrition, and motivation. Whether you're a beginner or a seasoned athlete, our community is here to support you every step of the way.</p>
+
+    <!-- Sign In Modal -->
+    <div class="modal fade" id="signInModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Sign In</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Sign In</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signUpModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Sign Up</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="newEmail">Email:</label>
+                <input type="email" class="form-control" id="newEmail" placeholder="Enter email" name="newEmail" required>
+              </div>
+              <div class="form-group">
+                <label for="newPwd">Password:</label>
+                <input type="password" class="form-control" id="newPwd" placeholder="Enter password" name="newPswd" required>
+              </div>
+              <button type="submit" class="btn btn-success">Sign Up</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div class="modal fade" id="forgotPasswordModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Forgot Password</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="forgotEmail">Email:</label>
+                <input type="email" class="form-control" id="forgotEmail" placeholder="Enter your email" name="forgotEmail" required>
+              </div>
+              <button type="submit" class="btn btn-warning">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial Section -->
+    <h2 class="text-center mt-5 mb-4">What Our Clients Say</h2>
+    <div class="testimonial">
+      <p>"The workouts here are amazing! I've seen incredible results in just a few weeks!"</p>
+      <strong>- Sarah L.</strong>
+    </div>
+    <div class="testimonial">
+      <p>"The community is supportive, and the trainers are very knowledgeable!"</p>
+      <strong>- John D.</strong>
+    </div>
+    <div class="testimonial">
+      <p>"I love the variety of classes offered. It's the best fitness experience I've had!"</p>
+      <strong>- Emma W.</strong>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <!-- Footer Links -->
+            <div class="col-md-6 mb-3">
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white" style="text-decoration: none;">Shipping & Return Policy</a></li>
+                    <li><a href="#" class="text-white" style="text-decoration: none;">Privacy Policy</a></li>
+                    <li><a href="#" class="text-white" style="text-decoration: none;">Terms & Conditions</a></li>
+                    <li><a href="#" class="text-white" style="text-decoration: none;">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- Contact Information -->
+            <div class="col-md-6 mb-3">
+                <p>Contact Information:</p>
+                <p>Call Us: +92-300-1234567</p>
+                <p>Email: <a href="mailto:info@healthandfitness.com" class="text-white" style="text-decoration: none;">info@healthandfitness.com</a></p>
+            </div>
+        </div>
+
+        <!-- Social Icons and Copyright -->
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="social-icons">
+                    <a href="#" class="mr-3" style="font-size: 1.5rem; color: #3b5998;"><i class="fab fa-facebook-f"></i></a> <!-- Facebook -->
+                    <a href="#" class="mr-3" style="font-size: 1.5rem; color: #00acee;"><i class="fab fa-twitter"></i></a> <!-- Twitter -->
+                    <a href="#" class="mr-3" style="font-size: 1.5rem; color: #C13584;"><i class="fab fa-instagram"></i></a> <!-- Instagram -->
+                    <a href="#" class="mr-3" style="font-size: 1.5rem; color: #FF0000;"><i class="fab fa-youtube"></i></a> <!-- YouTube -->
+                </div>
+            </div>
+            <div class="col-md-6 text-md-right">
+                <p class="mb-0">&copy; 2024 Health & Fitness. All rights reserved.</p>
+                <p>Designed by Azhar Khan</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap & FontAwesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - Health & Fitness</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      /* Custom Navbar Styling */
+.custom-navbar {
+  background: linear-gradient(90deg, #ffd61e, #00ccff);/* Gradient Background */
+box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+padding: 10px 20px;
+}
+
+.navbar-brand {
+font-family: 'Poppins', sans-serif; /* Modern font */
+font-size: 1.5rem;
+font-weight: bold;
+color: white;
+}
+
+.navbar-nav .nav-item .nav-link {
+font-family: 'Poppins', sans-serif;
+font-size: 1.1rem;
+color: white;
+padding: 10px 15px;
+transition: all 0.3s ease-in-out;
+border-radius: 4px; /* Rounded corners */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+background-color: white;
+color: #1e90ff;
+transform: scale(1.1); /* Slight scaling effect */
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Elevation on hover */
+}
+
+.navbar-toggler {
+border: none;
+}
+
+.navbar-toggler-icon {
+background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba%28155,155,155,1%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+@media (max-width: 992px) {
+.navbar-nav .nav-link {
+  margin: 5px 0;
+}
+}
+
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+      }
+
+      .section-title {
+          margin: 40px 0;
+          text-align: center;
+      }
+
+      .card {
+          margin-bottom: 20px;
+          cursor: pointer; /* Change cursor to pointer on hover */
+      }
+
+      .card img {
+          object-fit: cover;
+          height: 200px; /* Fixed height for images */
+      }
+  </style>
+      <style>
+          /* Custom Navbar Styling */
+          .custom-navbar {
+              background: linear-gradient(90deg, #ffd61e, #00ccff); /* Gradient Background */
+              box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+              padding: 10px 20px;
+          }
+  
+          .navbar-brand {
+              font-family: 'Poppins', sans-serif; /* Modern font */
+              font-size: 1.5rem;
+              font-weight: bold;
+              color: white;
+          }
+  
+          .navbar-nav .nav-item .nav-link {
+              font-family: 'Poppins', sans-serif;
+              font-size: 1.1rem;
+              color: white;
+              padding: 10px 15px;
+              transition: all 0.3s ease-in-out;
+              border-radius: 4px; /* Rounded corners */
+          }
+  
+          .navbar-nav .nav-item .nav-link:hover {
+              background-color: white;
+              color: #1e90ff;
+              transform: scale(1.1); /* Slight scaling effect */
+              box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Elevation on hover */
+          }
+  
+          .navbar-toggler {
+              border: none;
+          }
+  
+          .navbar-toggler-icon {
+              background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba%28155,155,155,1%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+          }
+  
+          @media (max-width: 992px) {
+              .navbar-nav .nav-link {
+                  margin: 5px 0;
+              }
+          }
+  
+          body {
+              font-family: Arial, sans-serif;
+              background-color: #f4f4f4;
+              margin: 0;
+          }
+  
+          .navbar {
+              margin-bottom: 20px;
+          }
+  
+          .contact-form {
+              background-color: #fff;
+              padding: 30px;
+              border-radius: 10px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          }
+  
+          .footer {
+              background-color: #343a40;
+              color: #ffffff;
+              padding: 20px 0;
+              text-align: center;
+          }
+  
+          .alert {
+              display: none; /* Initially hide alert */
+          }
+  
+          /* Responsive styling for smaller screens */
+          @media (max-width: 576px) {
+              .contact-form {
+                  padding: 20px;
+              }
+          }
+  
+          footer {
+              background-color: #2a2b2c;
+              padding: 40px 0;
+              text-align: center;
+          }
+  
+          .social-icons {
+              margin: 20px 0;
+          }
+  
+          .social-icons a {
+              margin: 0 10px;
+              font-size: 2rem;
+              transition: color 0.3s, opacity 0.3s; 
+          }
+  
+          .social-icons a.facebook {
+              color: #3b5998;
+          }
+  
+          .social-icons a.twitter {
+              color: #1DA1F2;
+          }
+  
+          .social-icons a.instagram {
+              color: #C13584;
+          }
+  
+          .social-icons a.youtube {
+              color: #FF0000;
+          }
+  
+          .social-icons a:hover {
+              opacity: 0.7; 
+          }
+  
+          /* Footer Styles */
+          footer {
+              background-color: #333;
+              color: #fff;
+              padding: 60px 0;
+              text-align: center;
+              font-family: 'Arial', sans-serif;
+          }
+  
+          footer h4 {
+              font-size: 1.8rem;
+              margin-bottom: 30px;
+              text-transform: uppercase;
+              font-weight: bold;
+              letter-spacing: 2px;
+          }
+  
+          footer .social-icons {
+              margin-bottom: 30px;
+              justify-content: center;
+          }
+  
+          footer .social-icons a {
+              display: inline-block;
+              margin-bottom: 5px;
+              color: white;
+              font-size: 30px;
+              transition: color 0.3s ease;
+          }
+  
+          footer .social-icons a:hover {
+              color: #1abc9c; /* Changes to a soft green on hover */
+          }
+  
+          footer ul {
+              list-style-type: none;
+              padding: 0;
+              margin: 20px 0;
+          }
+  
+          footer ul li {
+              margin: 10px 0;
+          }
+  
+          footer ul li a {
+              color: white;
+              text-decoration: none;
+              font-size: 1.1rem;
+              transition: color 0.3s ease;
+          }
+  
+          footer ul li a:hover {
+              color: #1abc9c; /* Same soft green hover effect */
+          }
+  
+          footer p {
+              margin: 15px 0;
+          }
+  
+          footer p a {
+              color: #1abc9c; /* Soft green for email links */
+              text-decoration: none;
+          }
+  
+          footer p a:hover {
+              text-decoration: underline;
+          }
+  
+          /* Container Styling */
+          footer .container {
+              max-width: 1200px;
+              margin: 0 auto;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              align-items: center;
+          }
+  
+          footer .container > div {
+              flex: 1 1 250px;
+              padding: 20px;
+              box-sizing: border-box;
+          }
+  
+          footer .container ul {
+              text-align: left;
+              padding-left: 0;
+          }
+  
+          footer .container > div p {
+              text-align: left;
+              font-size: 1.1rem;
+              color: #ccc;
+          }
+  
+          /* Mobile Responsiveness */
+          @media (max-width: 768px) {
+              footer .container {
+                  flex-direction: column;
+                  align-items: center;
+              }
+  
+              footer .container > div {
+                  text-align: center;
+              }
+  
+              footer .social-icons a {
+                  margin: 0 10px;
+              }
+          }
+  
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .testimonial {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .testimonial img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+        .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2); /* Change as per your design */
+    color: #1e90ff; /* Change as per your design */
+}
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <a class="navbar-brand" href="#">Health & Fitness</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="HomePage.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="workoutpage.html">Workouts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Testimonials.html">Testimonials</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ContactUs.html">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  // Highlight the active nav link
+  const currentLocation = window.location.href;
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+  navLinks.forEach(link => {
+    if (link.href === currentLocation) {
+      link.classList.add('active');
+    }
+  });
+</script>
+
+    <!-- Testimonials Section -->
+    <div class="container my-5">
+      <strong>
+        <h2 class="text-center mb-5">What Our Clients Say</h2>
+      </strong>
+        
+        <div class="row">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="testimonial">
+                    <img src="client6.jpeg" alt="Sarah M.">
+                    <p>"I lost 20 lbs in 3 months following the HIIT workouts. This program changed my life!"</p>
+                    <strong>- Sarah M.</strong>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="testimonial">
+                    <img src="client5.jpeg" alt="John K.">
+                    <p>"The yoga sessions helped me regain my flexibility. I feel more energetic and focused."</p>
+                    <strong>- John K.</strong>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="testimonial">
+                    <img src="client1.jpeg" alt="Maria S.">
+                    <p>"Strength training has been a game-changer. I am stronger and healthier than ever."</p>
+                    <strong>- Maria S.</strong>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="testimonial">
+                    <img src="client2.jpeg" alt="Mike T.">
+                    <p>"The personalized meal plans made all the difference. I feel great and have more energy!"</p>
+                    <strong>- Mike T.</strong>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="testimonial">
+                    <img src="client3.jpeg" alt="Lisa R.">
+                    <p>"I never enjoyed working out until now. The trainers are fantastic and the community is supportive!"</p>
+                    <strong>- Lisa R.</strong>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="testimonial">
+                    <img src="client4.jpeg" alt="David B.">
+                    <p>"I've never been this fit in my life! The program is challenging yet rewarding."</p>
+                    <strong>- David B.</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+          <div class="row">
+              <!-- Footer Links -->
+              <div class="col-md-6 mb-3">
+                  <ul class="list-unstyled">
+                      <li><a href="#" class="text-white" style="text-decoration: none;">Shipping & Return Policy</a></li>
+                      <li><a href="#" class="text-white" style="text-decoration: none;">Privacy Policy</a></li>
+                      <li><a href="#" class="text-white" style="text-decoration: none;">Terms & Conditions</a></li>
+                      <li><a href="#" class="text-white" style="text-decoration: none;">Contact Us</a></li>
+                  </ul>
+              </div>
+              <!-- Contact Information -->
+              <div class="col-md-6 mb-3">
+                  <p>Contact Information:</p>
+                  <p>Call Us: +92-300-1234567</p>
+                  <p>Email: <a href="mailto:info@healthandfitness.com" class="text-white" style="text-decoration: none;">info@healthandfitness.com</a></p>
+              </div>
+          </div>
+  
+          <!-- Social Icons and Copyright -->
+          <div class="row">
+              <div class="col-md-6 mb-3">
+                  <div class="social-icons">
+                      <a href="#" class="mr-3" style="font-size: 1.5rem; color: #3b5998;"><i class="fab fa-facebook-f"></i></a> <!-- Facebook -->
+                      <a href="#" class="mr-3" style="font-size: 1.5rem; color: #00acee;"><i class="fab fa-twitter"></i></a> <!-- Twitter -->
+                      <a href="#" class="mr-3" style="font-size: 1.5rem; color: #C13584;"><i class="fab fa-instagram"></i></a> <!-- Instagram -->
+                      <a href="#" class="mr-3" style="font-size: 1.5rem; color: #FF0000;"><i class="fab fa-youtube"></i></a> <!-- YouTube -->
+                  </div>
+              </div>
+              <div class="col-md-6 text-md-right">
+                  <p class="mb-0">&copy; 2024 Health & Fitness. All rights reserved.</p>
+                  <p>Designed by Azhar Khan</p>
+              </div>
+          </div>
+      </div>
+  </footer>
+  
+  <!-- Bootstrap & FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Health & Fitness</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Custom Navbar Styling */
+        .custom-navbar {
+            background: linear-gradient(90deg, #ffd61e, #00ccff); /* Gradient Background */
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            padding: 10px 20px;
+        }
+
+        .navbar-brand {
+            font-family: 'Poppins', sans-serif; /* Modern font */
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .navbar-nav .nav-item .nav-link {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            color: white;
+            padding: 10px 15px;
+            transition: all 0.3s ease-in-out;
+            border-radius: 4px; /* Rounded corners */
+        }
+
+        .navbar-nav .nav-item .nav-link:hover {
+            background-color: white;
+            color: #1e90ff;
+            transform: scale(1.1); /* Slight scaling effect */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Elevation on hover */
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba%28155,155,155,1%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+        }
+
+        @media (max-width: 992px) {
+            .navbar-nav .nav-link {
+                margin: 5px 0;
+            }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        .navbar {
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .alert {
+            display: none; /* Initially hide alert */
+        }
+
+        /* Responsive styling for smaller screens */
+        @media (max-width: 576px) {
+            .contact-form {
+                padding: 20px;
+            }
+        }
+
+        footer {
+            background-color: #2a2b2c;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .social-icons {
+            margin: 20px 0;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 2rem;
+            transition: color 0.3s, opacity 0.3s; 
+        }
+
+        .social-icons a.facebook {
+            color: #3b5998;
+        }
+
+        .social-icons a.twitter {
+            color: #1DA1F2;
+        }
+
+        .social-icons a.instagram {
+            color: #C13584;
+        }
+
+        .social-icons a.youtube {
+            color: #FF0000;
+        }
+
+        .social-icons a:hover {
+            opacity: 0.7; 
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+        }
+
+        footer h4 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        footer .social-icons {
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        footer .social-icons a {
+            display: inline-block;
+            margin-bottom: 5px;
+            color: white;
+            font-size: 30px;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            color: #1abc9c; /* Changes to a soft green on hover */
+        }
+
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        footer ul li {
+            margin: 10px 0;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        footer ul li a:hover {
+            color: #1abc9c; /* Same soft green hover effect */
+        }
+
+        footer p {
+            margin: 15px 0;
+        }
+
+        footer p a {
+            color: #1abc9c; /* Soft green for email links */
+            text-decoration: none;
+        }
+
+        footer p a:hover {
+            text-decoration: underline;
+        }
+
+        /* Container Styling */
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer .container > div {
+            flex: 1 1 250px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        footer .container ul {
+            text-align: left;
+            padding-left: 0;
+        }
+
+        footer .container > div p {
+            text-align: left;
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            footer .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            footer .container > div {
+                text-align: center;
+            }
+
+            footer .social-icons a {
+                margin: 0 10px;
+            }
+        }
+        .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2); /* Change as per your design */
+    color: #1e90ff; /* Change as per your design */
+}
+
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <a class="navbar-brand" href="#">Health & Fitness</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="HomePage.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="workoutpage.html">Workouts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Testimonials.html">Testimonials</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ContactUs.html">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  // Highlight the active nav link
+  const currentLocation = window.location.href;
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+  navLinks.forEach(link => {
+    if (link.href === currentLocation) {
+      link.classList.add('active');
+    }
+  });
+</script>
+
+    <!-- Contact Section -->
+    <div class="container my-5">
+        <h2 class="text-center mb-5">Contact Us</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="contact-form">
+                    <div class="alert alert-success" id="success-alert">Your message has been sent successfully!</div>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Write your message here" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block"style=" background: linear-gradient(90deg, #ffd61e, #00ccff);border:none">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+          <div class="row">
+              <!-- Footer Links -->
+              <div class="col-md-6 mb-3">
+                  <ul class="list-unstyled">
+                      <li><a href="#" class="text-white" style="text-decoration: none;">Shipping & Return Policy</a></li>
+                      <li><a href="#" class="text-white" style="text-decoration: none;">Privacy Policy</a></li>
+                      <li><a href="#" class="text-white" style="text-decoration: none;">Terms & Conditions</a></li>
+                      <li><a href="#" class="text-white" style="text-decoration: none;">Contact Us</a></li>
+                  </ul>
+              </div>
+              <!-- Contact Information -->
+              <div class="col-md-6 mb-3">
+                  <p>Contact Information:</p>
+                  <p>Call Us: +73468749283</p>
+                  <p>Email: <a href="mailto:info@healthandfitness.com" class="text-white" style="text-decoration: none;">info@healthandfitness.com</a></p>
+              </div>
+          </div>
+  
+          <!-- Social Icons and Copyright -->
+          <div class="row">
+              <div class="col-md-6 mb-3">
+                  <div class="social-icons">
+                      <a href="#" class="mr-3" style="font-size: 1.5rem; color: #3b5998;"><i class="fab fa-facebook-f"></i></a> <!-- Facebook -->
+                      <a href="#" class="mr-3" style="font-size: 1.5rem; color: #00acee;"><i class="fab fa-twitter"></i></a> <!-- Twitter -->
+                      <a href="#" class="mr-3" style="font-size: 1.5rem; color: #C13584;"><i class="fab fa-instagram"></i></a> <!-- Instagram -->
+                      <a href="#" class="mr-3" style="font-size: 1.5rem; color: #FF0000;"><i class="fab fa-youtube"></i></a> <!-- YouTube -->
+                  </div>
+              </div>
+              <div class="col-md-6 text-md-right">
+                  <p class="mb-0">&copy; 2024 Health & Fitness. All rights reserved.</p>
+                  <p>Designed by Azhar Khan</p>
+              </div>
+          </div>
+      </div>
+  </footer>
+  
+  <!-- Bootstrap & FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('success-alert').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
